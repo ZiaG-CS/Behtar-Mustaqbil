@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background-color: #0d0f24;
+            color: #ffffff;
+        }
+        header {
+            text-align: center;
+            background: linear-gradient(to right, #004d00, #002a00);
+            color: #00cc44;
+            padding: 80px 20px;
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px #006400, 0 0 20px #004d00;
+        }
+        header h1 {
+            font-size: 50px;
+            color: #00cc44;
+            text-shadow: 0 0 15px #004d00, 0 0 25px #002a00;
+        }
+        .intro-text {
+            font-size: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #00cc44;
+            text-shadow: 0 0 8px #004d00;
+        }
+        section {
+            padding: 40px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 20px;
+            background-color: #141629;
+            box-shadow: 0px 10px 40px rgba(0, 100, 0, 0.5);
+        }
+        h2 {
+            font-size: 36px;
+            color: #009933;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #004d00;
+        }
+ nav{
+            background: #141629;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav a{
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover{
+            color: #228b22;
+            transform: scale(1.1);
+        }
+
+        .about-section p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-top: 20px;
+            color: #e6e6e6;
+        }
+        .about-section ul {
+            margin-top: 30px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .about-section ul li {
+            background: #004d00;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin: 10px;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+        .founder-section {
+            background: #002a00;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .founder-section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #00cc44;
+            text-shadow: 0 0 8px #004d00;
+            justify-content: left;
+        }
+        .founder-section p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        .activities-section {
+            background: #141629;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 100, 0, 0.3);
+            margin-top: 40px;
+        }
+        .activities-section h2 {
+            color: #00cc44;
+        }
+        .activities-section ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .activities-section li {
+            background: #004d00;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 5px #003300;
+        }
+        .work-section {
+            padding: 50px;
+            text-align: center;
+            background: #141629;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 100, 0, 0.3);
+            margin-top: 40px;
+        }
+        .work-section h2 {
+            color: #00cc44;
+        }
+        .work-gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .work-item {
+            width: 300px;
+            height: 300px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            background: #1b1e2f;
+        }
+        .contact-section {
+            background: #004d00;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0px 10px 30px rgba(0, 100, 0, 0.3);
+        }
+        .contact-section h4 {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #00cc44;
+            text-shadow: 0 0 10px #003300;
+        }
+        .contact-section a {
+            color: #00cc44;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .contact-section a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .donation-details {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .donation-details span {
+            color: #00cc44;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Behtar Mustaqbil Foundation</h1>
+        <p class="intro-text">Empowering Lives, Shaping the Future</p>
+    </header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="program.html">Our Programs</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>Behtar Mustaqbil Foundation (BMF) is a non-governmental organisation, established in November 2004. At a time when social commentary, action, and uplifting society through common goals are most needed, the BMF is steadily proving its ability to take on the burden of educating and initiating changes for a brighter future for all. At its heart, six aims make up the foundation of BMF including ...</p>
+        <ul>
+            <li>Environmental Conservation</li>
+            <li>Women Empowerment</li>
+            <li>Community Support</li>
+            <li>Educational Programs</li>
+            <li>Social Awareness</li>
+            <li>Health & Wellbeing</li>
+        </ul>
+    </section>
+    <section class="founder-section">
+        <h3>Message from the Founder</h3>
+        <p><strong>Raja Hamid</strong>, the visionary founder of BMF and the president of BMF, is the driving force behind its success. Making up your mind to accomplish something and then putting in the effort to achieve it is no easy task, especially when the goals is to establish a large-scale non-governmental organisation. Hamid did not only stay committed to his idea but also worked tirelessly to make it come true. Today, as an emerging NGO, Behtar Mustaqbil is credited to Hamid’s energy, enthusiasm and dedication. From turning this vision to a reality, to putting together a qualified team, Hamid has proven himself to be a true leader.</p>
+    </section>
+    <section class="activities-section">
+        <h2>Our Activities</h2>
+        <p>Behtar Mustaqbil Foundation has taken multiple initiatives, and in the future will continue to do, that align with the organisation’s aim. There are multiple means through which we have helped peoples and we are looking out for more ways to help them some of them are below.</p><br>
+        <ul>
+            <li>Food Drives</li>
+            <li>Book Donations</li>
+            <li>Support for Elderly</li>
+            <li>Educational Workshops</li>
+            <li>Community Clean-Ups</li>
+            <li>Healthcare Camps</li>
+        </ul>
+    </section>
+     <section class="contact-section">
+        <h4>Contact Us</h4>
+        <p>There are multiple means through which everyone can keep in touch with Behtar Mustaqbil Foundation and look out for ways to participannnonnte. You can follow our page on Instagram <a href="www.bmfofficial2024.instagram.com">Bmfofficial2024</a> to stay up-to-date with all new articles and activities that will be introduced, and get in contact through our email</p><br>
+        <p>For inquiries, please email us at <a href="mailto:behtar.mustaqbil.foundation@gmail.com">behtar.mustaqbil.foundation@gmail.com </a></p>
+        <div class="donation-details">
+            Donate via bank transfer to <span>Account #0019302010117255.</span><br>
+            Jazzcash <span>03004491318</span>
+    </section>
+</body>
+</html> 
+

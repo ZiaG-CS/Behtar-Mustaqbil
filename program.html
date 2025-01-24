@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html{
+            font-family: Arial, sans-serif;
+            background: #0a0c1b;
+            color: #ffffff;
+        }
+        header{
+            text-align: center;
+            padding: 40px 0;
+            background: #006400;
+            color: white;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            font-size: 36px;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        nav{
+            background: #141629;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav a{
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover{
+            color: #228b22;
+            transform: scale(1.1);
+        }
+        .container{
+            padding: 20px;
+        }
+        .program-section{
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(10, 12, 27, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 100, 0, 0.5);
+        }
+        .program-section h2{
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #059f05;
+            color: rgb(12, 177, 12);
+        }
+        .program{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .program img{
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 100, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .program img:hover{
+            transform: scale(1.05);
+        }
+        .program-info{
+            flex: 1;
+            padding: 15px;
+            background: rgb(1, 95, 1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 100, 0, 0.3);
+        }
+        .program-info h3{
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: white;
+        }
+        .program-info p{
+            color: white;
+            line-height: 1.5;
+        }
+        .donation{
+            background-color: #228b22;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .donation h2{
+            font-size: 24px;
+            color: white;
+        }
+        .donation button{
+            background-color: #006400;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .donation button:hover{
+            background-color: #228b22;
+        }
+        .program:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        .b1{
+            background: linear-gradient(90deg, #063c18, #228b22); 
+            color: white; 
+            padding: 12px 25px; 
+            border: none; 
+            border-radius: 25px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            box-shadow: 0 5px 10px rgba(0, 204, 68, 0.5); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #034303;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <br>
+    Behtar Mustaqbil - Our Programs
+    <br><br>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="program.html">Our Programs</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+<div class="container">
+    <div class="program-section">
+        <h2>Our Education Program</h2>
+        <div class="program">
+            <img src= " image 7.jpeg"alt="Education Program">
+            <div class="program-info">
+                <h3>Education for All</h3>
+                <p>Our Education Program aims to provide access to quality education for underprivileged children in rural and urban areas. Through donations and partnerships with local schools and NGOs, we offer free textbooks, learning materials, and after-school tutoring to ensure that every child has the opportunity to learn and succeed. This program focuses on reducing educational inequalities and empowering youth with the skills needed for a brighter future.</p>
+                <p><strong>Impact:</strong> Since its launch, over 500 children have benefitted from our education program, with many continuing their studies in higher education and contributing to their communities.</p>
+            </div>
+        </div>
+    </div>
+    <div class="program-section">
+        <h2>Health and Wellness Program</h2>
+        <div class="program">
+            <div class="program-info">
+                <h3>Health for All</h3>
+                <p>Our Health and Wellness Program focuses on improving the health and well-being of families in low-income communities. We provide free health check-ups, distribute medications, and raise awareness about preventive health measures such as vaccinations, sanitation, and hygiene. In partnership with local hospitals and clinics, we aim to reduce the burden of diseases and ensure better access to healthcare services for marginalized groups.</p>
+                <p><strong>Impact:</strong> The program has served over 10,000 individuals, providing them with critical healthcare services and improving the overall quality of life in the targeted areas.</p>
+            </div>
+            <img src=" image 2.jfif" alt="Health and Wellness Program">
+        </div>
+    </div>
+    <div class="program-section">
+        <h2>Women Empowerment Program</h2>
+        <div class="program">
+            <img src=" image  3.jfif" alt="Women Empowerment Program">
+            <div class="program-info">
+                <h3>Empowering Women</h3>
+                <p>Our Women Empowerment Program is designed to uplift women in disadvantaged communities by providing them with opportunities to improve their economic and social status. We offer vocational training in skills such as sewing, handicrafts, and small business management. Additionally, the program focuses on raising awareness about gender equality, women’s rights, and providing legal assistance to women in need.</p>
+                <p><strong>Impact:</strong> Over 1,000 women have been trained through this program, many of whom have gone on to start their own businesses or find sustainable employment, significantly improving their financial independence.</p>
+            </div>
+        </div>
+    </div>
+    <div class="program-section">
+        <h2>Clean Water Initiative</h2>
+        <div class="program">
+            <div class="program-info">
+                <h3>Access to Clean Water</h3>
+                <p>The Clean Water Initiative focuses on providing clean, safe drinking water to communities with limited access to fresh water sources. By building wells, installing filtration systems, and educating the public on water conservation, we aim to reduce waterborne diseases and ensure better health outcomes for families living in underserved areas.</p>
+                <p><strong>Impact:</strong> To date, we have constructed over 50 water wells and filtration systems, benefitting more than 15,000 individuals with reliable access to clean water.</p>
+            </div>
+            <img src=" image 4.jpg" alt="Clean Water Initiative">
+        </div>
+    </div>
+    <div class="program-section">
+        <h2>Youth Development Program</h2>
+        <div class="program">
+            <img src=" image 6.jfif" alt="Youth Development Program">
+            <div class="program-info">
+                <h3>Developing Future Leaders</h3>
+                <p>Our Youth Development Program aims to build leadership skills among young people in underserved areas. We organize workshops, mentorship programs, and community service activities to empower the youth and provide them with the tools necessary to become leaders in their communities. Our goal is to help young people gain confidence, career skills, and a strong sense of social responsibility.</p>
+                <p><strong>Impact:</strong> Hundreds of young people have participated in our workshops, gaining leadership skills and building strong networks that will help them navigate their careers and communities.</p>
+            </div>
+        </div>
+    </div>
+    <div class="donation">
+        <h2>Support Our Programs</h2>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="donate.html" style="text-decoration: none;">
+                <button type="button" class="b1">Support</button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

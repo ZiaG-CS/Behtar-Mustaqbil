@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html{
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background: linear-gradient(to bottom right, #1b1f34, #0d0f24);
+            color: white;
+            
+        }
+        header{
+            text-align: center;
+            padding: 20px 10px;
+            background: linear-gradient(to right, #004d00, #002a00); 
+            color: #00cc44;
+            text-shadow: 0 0 10px #006400, 0 0 20px #004d00;
+            position: relative;
+        }
+        .intro{
+            text-align: center;
+            padding: 20px 10px;
+            color: #00cc44;
+            text-shadow: 0 0 10px #006400, 0 0 20px #004d00;
+            position: relative;
+        }
+        .intro h1{
+            font-size: 40px;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            position: relative;
+            animation: slideText 5s infinite;
+        }
+        @keyframes slideText{
+            0%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            25%{
+                transform: translateX(50%);
+                opacity: 0;
+            }
+            50%{
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            75%{
+                transform: translateX(-50%);
+                opacity: 1;
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        header h1{
+            font-size: 40px;
+            text-transform: uppercase;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow{
+            from{
+                text-shadow: 0 0 10px #00cc44, 0 0 20px #004d00;
+            }
+            to{
+                text-shadow: 0 0 20px #00cc44, 0 0 30px #006400;
+            }
+        }
+        header p{
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #0d0f24;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .logo img{
+            width: 80px;
+           
+            border-radius: 50%;
+            border: 2px solid #00cc44;
+        }
+        nav .links{
+            display: flex;
+            gap: 20px;
+        }
+        nav .links a{
+            color: #00cc44;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav .logo a{
+            display: flex;
+            gap: 20px;display: flex;
+            gap: 20px;
+            color: #00cc44;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        } 
+        nav .links a:hover{
+            color: #ffffff;
+        }
+        nav .search-bar{
+            display: flex;
+            align-items: center;
+            border: 1px solid #00cc44;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        nav .search-bar input{
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            padding: 5px;
+            font-size: 1em;
+        }
+        nav .search-bar button{
+            border: none;
+            background: #00cc44;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        nav .search-bar button:hover{
+            background: #006400;
+        }
+        .hero{
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1000px;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero h2{
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #006400;
+        }
+        .intro p{
+            color: whitesmoke;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .intro .cta-button{
+            background: #00cc44;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .intro .cta-button:hover{
+            background: #006400;
+        }
+        .section{
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        .section h2{
+            font-size: 28px;
+            color: #00cc44;
+            text-shadow: 0 0 10px #006400;
+            margin-bottom: 20px;
+        }
+        .section p{
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        footer{
+            text-align: center;
+            padding: 20px;
+            background: #004d00;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        footer a{
+            color: #00cc44;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        footer a:hover{
+            text-decoration: underline;
+        }
+        .section{
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        .section h2{
+            font-size: 28px;
+            color: #00cc44;
+            text-shadow: 0 0 10px #006400;
+            margin-bottom: 20px;
+        }
+        .section p{
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .services{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .service-card{
+            background: #1b1f34;
+            border: 1px solid #00cc44;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .service-card img{
+            height: 200px;
+            width: 300px;
+            border-color: #00cc44;
+            margin-bottom: 15px;
+        }
+        .service-card h3{
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #00cc44;
+        }
+        .service-card p{
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .service-card .read-more{
+            background: #00cc44;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .service-card .read-more:hover{
+            background: #006400;
+        }
+        .achievements{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .achievement-card{
+            background: #1b1f34;
+            border: 1px solid #00cc44;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .achievement-card img{
+            width: 300px;
+            height: 200px;
+            margin-bottom: 15px;
+        }
+        .achievement-card h3{
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #00cc44;
+        }
+        .achievement-card p{
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .achievement-card .read-more{
+            background: #00cc44;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .achievement-card .read-more:hover{
+            background: #006400;
+        }
+        .founders{
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 20px; 
+        justify-content: center; 
+        align-items: center;
+        }
+        h2{
+            text-align: center;
+            font-size: 2.5rem;
+            color: #32cd32;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(50, 205, 50, 0.8);
+        }
+        .section{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .programs{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .program-card{
+            flex: 1 1 calc(33.333% - 20px); 
+            background: rgba(15, 18, 30, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+        }
+        .program-card h3{
+            font-size: 1.8rem;
+            color: #228b22;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(34, 139, 34, 0.8);
+        }
+        .program-card p{
+            color: #dcdcdc;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .program-card:hover{
+            transform: translateY(-10px);
+            background: rgba(34, 139, 34, 0.9);
+            box-shadow: 0 8px 20px rgba(0, 128, 0, 0.7);
+        }
+        .program-card:hover h3, .program-card:hover p{
+            color: white;
+        }
+        @media screen and (max-width: 768px){
+            .program-card{
+                flex: 1 1 100%;
+            }
+        }
+    .cta-button{
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        background: linear-gradient(90deg, #006400, #32cd32);
+        border-radius: 30px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 100, 0, 0.5);
+        transition: all 0.3s ease-in-out;
+        margin: 30px auto; 
+    }
+    .cta-button:hover{
+        transform: scale(1.1);
+        background: linear-gradient(90deg, #228b22, #00ff7f);
+        box-shadow: 0 10px 25px rgba(34, 139, 34, 0.7);
+    }
+    .cta-button-container{
+        text-align: center;
+        margin: 40px 0;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Behtar Mustaqbil</h1>
+    <p>Empowering Communities, Shaping Futures</p>
+</header>
+<nav style="border: whitesmoke; border-radius: 5%;">
+    <div class="logo">
+        <img src=" logo.jpeg" alt="Behtar Mustaqbil Logo">
+        <a href="login.html">B.M.F</a>
+    </div>
+    <div class="links"> | 
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About Us</a> | 
+        <a href="program.html">Our Programs</a> | 
+        <a href="donate.html">Donate</a> | 
+        <a href="contact.html">Contact</a> | 
+    </div>
+    <div>  
+
+</div>
+</nav>
+<div class="intro">
+    <br><br><h1>Welcome to Behtar Mustaqbil</h1><p>Together, we can build a brighter future for all.</p>
+    <br><br><a href="donate.html" class="cta-button">Support Our Cause</a>
+</div><br><br>
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Behtar Mustaqbil is a non-governmental organization dedicated to creating positive social change by empowering underprivileged communities. It is one of the top NGOs in Pakistan that is dedicated to empowering communities and transforming lives since 1979. From healthcare, education, food security, livelihood, water and sanitation to resilient infrastructure and social development, we tackle development issues at its core. <br>
+        You can also contribute to our cause by donating Zakat online in Pakistan. Your Zakat can make a significant impact in providing essential services to those in need and help us in our mission to build a better Pakistan where everyone reaches their full potential. <br>
+        Explore our impact, discover how you can join us, and be part of something bigger. Together, we can build a Pakistan where everyone reaches their full potentialOur mission is to provide access to education, healthcare, and basic resources for those in need, with a special focus on youth development and women’s empowerment.</p><br>
+</section>
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <img src=" image 1.jpg"alt="Education Icon">
+            <h3>Education</h3>
+            <p>Providing education for underprivileged communities.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="service-card">
+            <img src=" image 2.jfif" alt="Healthcare Icon">
+            <h3>Healthcare</h3>
+            <p>Delivering essential medical services to remote areas.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="service-card">
+            <img src=" image  3.jfif"  alt="Empowerment Icon">
+            <h3>Women Empowerment</h3>
+            <p>Empowering women through skill development programs.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="service-card">
+            <img src=" image 4.jpg" alt="Water Icon">
+            <h3>Clean Water</h3>
+            <p>Ensuring access to clean drinking water for all.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="service-card">
+            <img src=" image  5.jpg" alt="Food Icon">
+            <h3>Food Security</h3>
+            <p>Providing nutritious meals to those in need.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="service-card">
+            <img src="image 6.jfif" alt="Livelihood Icon">
+            <h3>Livelihood Programs</h3>
+            <p>Supporting self-sufficiency through skill training.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+</section>
+<section id="programs" class="section">
+    <h2>Our Programs</h2>
+    <div class="programs">
+        <div class="program-card">
+            <h3>Education for All</h3>
+            <p>We provide quality education to children from disadvantaged backgrounds, ensuring every child has access to learning and a better future.</p>
+        </div>
+        <div class="program-card">
+            <h3>Healthcare Initiatives</h3>
+            <p>Our healthcare programs aim to deliver essential medical services to remote areas, improving the health and well-being of the most vulnerable.</p>
+        </div>
+        <div class="program-card">
+            <h3>Women’s Empowerment</h3>
+            <p>We work to empower women through skill development programs, financial literacy, and leadership training to help them achieve independence and equality.</p>
+        </div>
+    </div>
+        <center><a href="program.html" class="cta-button" style="align-items: center;">See More</a></center>
+</section>
+<section id="donate" class="section">
+    <h2>Make a Difference</h2>
+    <p>Your donation can help change lives. Behtar Mustaqbil relies on the generosity of people like you to fund our programs and continue our work. Together, we can make a better future possible. So, help us to make a better future for people as possible. Your donation can change lives.</p>
+        <center><a href="donate.html" class="cta-button" >Donate Now</a></center>
+</section>
+
+
+    </div>
+</section>
+<footer>
+    <p>&copy; 2024 Behtar Mustaqbil. All Rights Reserved.</p>
+    <br><p>For any queries email us at <br>
+        <a href="www.gmail.com" style="color: white; margin: 0 10px;">bmfofficial2024@gmail.com</a>
+    </p>
+</footer>
+</body>
+</html>
